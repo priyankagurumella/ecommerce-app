@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-// Product list API
 router.get("/", (req, res) => {
-    const products = [
+    res.json([
         {
             id: 1,
             name: "Headphones",
@@ -19,9 +18,7 @@ router.get("/", (req, res) => {
             name: "Mobile Phone",
             price: 14999
         }
-    ];
-
-    res.json(products);
+    ]);
 });
 
 module.exports = router;
