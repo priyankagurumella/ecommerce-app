@@ -18,9 +18,11 @@ app.get("/", (req, res) => {
     res.send("E-Commerce Backend Running");
 });
 
-const PORT = 5000;
+
 app.use("/api/products", require("./routes/products"));
 app.use("/api/orders", require("./routes/orders"));
+
+const PORT = 5000;
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
